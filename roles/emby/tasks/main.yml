@@ -1,0 +1,19 @@
+---
+
+- name: Download Emby
+  get_url:
+    url: '{{ emby_download_url }}'
+    dest: /tmp/emby.deb
+
+- name: Install Emby
+  apt:
+    deb: /tmp/emby.deb
+  become: true
+
+- name: Remove installation file
+  file:
+    path: /tmp/emby.deb
+    state: absent
+
+- debug:
+    msg: "Visit http://ip:8096"

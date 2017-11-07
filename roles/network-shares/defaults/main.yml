@@ -1,0 +1,15 @@
+---
+
+# the user who will be in charge of everything
+user:
+  name: calvin
+  group: calvin
+  uid: 1000
+  gid: 1000
+
+nfs_mount:
+  src: "10.0.0.5:/mnt/hdd/"
+  name: "/mnt/hdd"
+  mode: "0771"
+  user: "{{ user.name }}"
+  group: "{{ user.group }}"

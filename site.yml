@@ -1,0 +1,13 @@
+---
+
+- hosts: emby
+
+  vars_files:
+    - vars/ssh.yml
+
+  roles:
+    # run by itself first
+    - ubuntu-setup
+    # run these after restarting
+    - network-shares
+    - emby

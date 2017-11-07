@@ -1,0 +1,15 @@
+---
+
+- name: Upgrade all packages
+  apt:
+    upgrade: dist
+    update_cache: yes
+    cache_valid_time: 3600
+  become: true
+
+- name: Install open-vm-tools
+  apt:
+    name: open-vm-tools
+    state: latest
+    cache_valid_time: 3600
+  become: true

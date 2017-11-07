@@ -1,0 +1,4 @@
+---
+
+emby_version: '3.2.36.0'
+emby_download_url: 'https://github.com/MediaBrowser/Emby/releases/download/{{ emby_version }}/emby-server-deb_{{ emby_version }}_amd64.deb'
